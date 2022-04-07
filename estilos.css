@@ -1,3 +1,5 @@
+
+
 body{
     background-color:#EEF9BF;
 }
@@ -20,7 +22,6 @@ header > h1{
 
 }
 
-
 .container{
     display: flex;
     flex-wrap: wrap;
@@ -41,6 +42,12 @@ header > h1{
     margin: 17px;
 
 }
+
+.verso{
+    background-color: red;
+    transition: all 6s linear;
+}
+
 
 .carta > img{
     width: 100px;
