@@ -45,7 +45,10 @@ header > h1{
 
 .verso{
     background-color: red;
-    transition: all 6s linear;
+    transition: all .5s;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+
 }
 
 
