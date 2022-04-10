@@ -13,6 +13,22 @@ body{
 
 }
 
+.clock{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50px;
+    color: #99CEA8;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
 header{
     width: 100%;
     display: flex;
@@ -35,7 +51,7 @@ header > h1{
     width: 906px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .carta{
@@ -82,11 +98,10 @@ header > h1{
     left: 10px;
 }
 
-
-
 .amostrado{
     opacity: 1;
 }
+
 
 @media(max-width:767px){
     header > h1{

@@ -2,6 +2,9 @@ console.log('deu bim');
 
 let contadorCartas = 0;
 let pares;
+let tempo = document.querySelector(".clock");
+tempo.innerHTML = 0;
+let idInterval;
 
 function comparador() { 
 	return Math.random() - 0.5; 
@@ -48,6 +51,7 @@ for(let k = 0; k < cartasemb.length; k++){
      <img class="frente" src="/img/${cartasemb[k]}.gif" alt=""></div>`
     console.log(k)
 }
+
 }
 
 iniciarJogo();
@@ -107,6 +111,15 @@ function comparaCartas(){
 function finalizarJogo(){
     let cartasNaoViradas = document.querySelectorAll(".frente").length;
     if( cartasNaoViradas === 0){
-        alert(`Você ganhou em ${contadorCartas} jogadas!`);
+        clearInterval(idInterval);
+        alert(`Você ganhou em ${contadorCartas} jogadas em um tempo de ${tempo.innerHTML} segundos!`);
     }
 }
+
+function tempoDeJogo(){
+    tempo.innerHTML++;
+    console.log(tempo.innerHTML);
+}
+
+idInterval = setInterval(tempoDeJogo, 1000);
+console.log(idInterval);
