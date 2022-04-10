@@ -4,6 +4,15 @@ body{
     background-color:#EEF9BF;
 }
 
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
 header{
     width: 100%;
     display: flex;
@@ -23,9 +32,10 @@ header > h1{
 }
 
 .container{
+    width: 906px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between--;
+    justify-content: space-between;
 }
 
 .carta{
@@ -35,9 +45,8 @@ header > h1{
     border: 1px solid #99CEA8 ;
     box-sizing: border-box;
     border-radius: 5px;
-    /* borda inner */
     position: relative;
-    margin: 17px;
+    margin:17px 17px;
     transition: all .5s;
     transform: rotateY(0deg);
     transform-style: preserve-3d;}
@@ -48,6 +57,23 @@ header > h1{
     transform-style: preserve-3d;
 }
 
+.frente, .verso{
+    opacity: 0;
+}
+
+/*.verso{
+    opacity: 0;
+    transform: rotateY(180deg);
+}
+
+.carta:active .verso{
+    transform: rotateY(0deg);
+}
+
+.carta:active .frente{
+    transform: rotateY(-180deg);
+} */
+
 .carta > img{
     width: 100px;
     height: 100px;
@@ -56,9 +82,7 @@ header > h1{
     left: 10px;
 }
 
-.frente, .verso{
-    opacity: 0;
-}
+
 
 .amostrado{
     opacity: 1;
@@ -67,9 +91,11 @@ header > h1{
 @media(max-width:767px){
     header > h1{
         font-size: 36px;
+        line-height: 42px;
     }
 
     .container{
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
