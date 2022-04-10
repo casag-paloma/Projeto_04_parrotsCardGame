@@ -36,25 +36,32 @@ header > h1{
     box-sizing: border-box;
     border-radius: 5px;
     /* borda inner */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     margin: 17px;
+    transition: all .5s;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;}
 
-}
-
-.verso{
-    background-color: red;
+.virar{
     transition: all .5s;
     transform: rotateY(180deg);
     transform-style: preserve-3d;
-
 }
-
 
 .carta > img{
     width: 100px;
     height: 100px;
+    position: absolute;
+    top: 24px;
+    left: 10px;
+}
+
+.frente, .verso{
+    opacity: 0;
+}
+
+.amostrado{
+    opacity: 1;
 }
 
 @media(max-width:767px){
