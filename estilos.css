@@ -77,19 +77,6 @@ header > h1{
     opacity: 0;
 }
 
-/*.verso{
-    opacity: 0;
-    transform: rotateY(180deg);
-}
-
-.carta:active .verso{
-    transform: rotateY(0deg);
-}
-
-.carta:active .frente{
-    transform: rotateY(-180deg);
-} */
-
 .carta > img{
     width: 100px;
     height: 100px;
@@ -100,6 +87,7 @@ header > h1{
 
 .amostrado{
     opacity: 1;
+    transition: all 1s;
 }
 
 
