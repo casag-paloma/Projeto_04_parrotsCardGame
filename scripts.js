@@ -47,7 +47,7 @@ iniciarJogo();
 function viraCarta(elemento){
     let pares = document.querySelectorAll(".frente.amostrado");
     if(pares.length < 2){
-        elemento.classList.toggle("virar");
+        elemento.classList.add("virar");
         elemento.querySelector(".frente").classList.add("amostrado");
         elemento.querySelector(".verso").classList.remove("amostrado");
         contadorCartas++;
@@ -59,7 +59,7 @@ function viraCarta(elemento){
 }
 
 function reviraCarta(elemento){
-    elemento.classList.toggle("virar");
+    elemento.classList.remove("virar");
     elemento.querySelector(".frente").classList.remove("amostrado");
     elemento.querySelector(".verso").classList.add("amostrado");
 }
